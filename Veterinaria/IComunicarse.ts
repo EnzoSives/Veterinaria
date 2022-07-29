@@ -1,6 +1,3 @@
-
-
-interface Comunicarse{
-
-     EnviarMensaje(receptor: string): string;
+export interface IComunicarse{
+ EnviarMensaje(receptor: string): string;
 }
