@@ -1,5 +1,3 @@
-
 export interface IComunicarse{
-
-     EnviarMensaje(receptor: string): string;
+ EnviarMensaje(receptor: string): string;
 }

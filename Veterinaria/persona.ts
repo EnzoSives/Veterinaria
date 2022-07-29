@@ -1,13 +1,12 @@
 export abstract class Persona{
-    
-    constructor(private nombre: string, private direccion: string,private telefono: number) {}
 
+    constructor(private nombre: string, private direccion: string,private telefono: number) {}
 
     abstract construirMensaje(): string;
     
     saludar(nombre: string): void {
         console.log('Hola' , nombre);
-    }
+     }
 
     getNombre(): string {
         return this.nombre;
@@ -32,6 +31,4 @@ export abstract class Persona{
     setDireccion(direccion: string) {
         this.direccion = direccion;
     }
-
-
 }
