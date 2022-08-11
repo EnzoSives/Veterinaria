@@ -1,34 +1,40 @@
-export abstract class Persona{
-
-    constructor(private nombre: string, private direccion: string,private telefono: number) {}
-
+export abstract class Persona {
+    private nombre: string;
+    private direccion: string;
+    private telefono: number;
+    protected id: number;
+    constructor(id: number, nombre: string, direccion: string, telefono: number) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.id = id;
+    }
     abstract construirMensaje(): string;
-    
     saludar(nombre: string): void {
-        console.log('Hola' , nombre);
-     }
-
+        console.log('Hola', nombre);
+    }
     getNombre(): string {
         return this.nombre;
     }
-
-    getTelefono(): number{ 
+    getTelefono(): number {
         return this.telefono;
     }
-
-    getDireccion(): string{
+    getDireccion(): string {
         return this.direccion;
     }
-
-    setNombre(nombre: string){
+    getId(){
+        return this.id;
+    }
+    setNombre(nombre: string) {
         this.nombre = nombre;
     }
-
-    setTelefono(telefono: number){
+    setTelefono(telefono: number) {
         this.telefono = telefono;
     }
-
     setDireccion(direccion: string) {
         this.direccion = direccion;
+    }
+    setiId(id:number){
+        this.id=id;
     }
 }

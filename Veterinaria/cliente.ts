@@ -2,7 +2,7 @@
 import { IComunicarse } from "./IComunicarse";
 import { Persona } from "./persona";
 
-export class cliente extends Persona implements IComunicarse {
+export class Cliente extends Persona implements IComunicarse {
    private id: number;
     
     constructor (id: number, direccion: string, telefono: number,nombre: string) {
