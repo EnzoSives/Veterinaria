@@ -15,27 +15,27 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
+exports.Cliente = void 0;
 var persona_1 = require("./persona");
-var cliente = /** @class */ (function (_super) {
-    __extends(cliente, _super);
-    function cliente(id, direccion, telefono, nombre) {
+var Cliente = /** @class */ (function (_super) {
+    __extends(Cliente, _super);
+    function Cliente(id, direccion, telefono, nombre) {
         var _this = _super.call(this, nombre, direccion, telefono) || this;
         _this.id = id;
         return _this;
     }
-    cliente.prototype.construirMensaje = function () {
+    Cliente.prototype.construirMensaje = function () {
         return "hola";
     };
-    cliente.prototype.EnviarMensaje = function (receptor) {
+    Cliente.prototype.EnviarMensaje = function (receptor) {
         return "Mensaje";
     };
-    cliente.prototype.getId = function () {
+    Cliente.prototype.getId = function () {
         return this.id;
     };
-    cliente.prototype.setId = function (newId) {
+    Cliente.prototype.setId = function (newId) {
         this.id = newId;
     };
-    return cliente;
+    return Cliente;
 }(persona_1.Persona));
-var pepe = new cliente(23, "casa", 878, "Juan");
-console.log(pepe.EnviarMensaje("Mensaje"));
+exports.Cliente = Cliente;
