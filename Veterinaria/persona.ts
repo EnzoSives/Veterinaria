@@ -2,8 +2,10 @@ export abstract class Persona {
     protected nombre: string;
     protected direccion: string;
     protected telefono: number;
-    protected id: number;
-    constructor(id: number, nombre: string, direccion: string, telefono: number) {
+    protected id : number;
+
+    
+    constructor(nombre: string, direccion: string, telefono: number,id: number) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
@@ -22,9 +24,13 @@ export abstract class Persona {
     getDireccion(): string {
         return this.direccion;
     }
-    getId(){
+    getId(): number {
         return this.id;
     }
+    setId(id: number){
+        this.id = id;
+    }
+    
     setNombre(nombre: string) {
         this.nombre = nombre;
     }
@@ -34,7 +40,5 @@ export abstract class Persona {
     setDireccion(direccion: string) {
         this.direccion = direccion;
     }
-    setiId(id:number){
-        this.id=id;
-    }
+    
 }

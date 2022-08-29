@@ -1,7 +1,8 @@
 import * as ReadlineSync from "readline-Sync";
 import  {Cliente} from "./cliente"
 import  {Paciente} from "./paciente"
-class Veterinaria{
+export class Veterinaria{
+    
     protected id : number;
     private nombre : string;
     private direccion : string;
@@ -9,19 +10,26 @@ class Veterinaria{
     private clientes : Cliente[];
     private pacientes : Paciente[];
     
-    constructor(id : number, nombre : string, direccion : string, telefono : number, clientes : Cliente[], pacientes : Paciente[]) {
+    constructor(id : number, nombre : string, direccion : string, telefono : number) {
         this.id = id;
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.clientes = clientes;
-        this.pacientes = pacientes;
+        
     }
-    
-    
-    altaCliente(cliente:Cliente){
-        this.clientes.push(cliente);
+
+
+    public generarId(): number {
+        return  this.id = Math.floor((Math.random() * 100) + 1);
     }
+
+    altaCliente(cliente:Cliente): void {
+        for (let i = 0; i < this.clientes.length; i++) {
+            if(this.clientes[i] === cliente)
+            this.clientes.push(cliente);
+            this.id = Math.floor((Math.random() * 100) + 1);       
+        
+    }}
 
     modificarCliente(cliente:Cliente){
         for (let i = 0; i < this.clientes.length; i++) {
@@ -51,6 +59,9 @@ class Veterinaria{
     setDireccion(direccion:string){
         this.direccion = direccion;
     }
+    setId(id:number){
+        this.id= id;
+    }
     getId(){
         return this.id;
     }
@@ -64,3 +75,4 @@ class Veterinaria{
         return this.nombre;
     }
 }
+
