@@ -3,15 +3,17 @@ import { Persona } from "./persona";
 
 export class Proveedor extends Persona implements IComunicarse {
     
+    protected id : number;
     private cuil:number;
 
     constructor(cuil: number, nombre: string, direccion: string, telefono: number) {
         super(nombre,direccion,telefono);
-        this.cuil = this.cuil;
+        this.cuil = cuil;
+        this.id = Math.floor((Math.random() * 100) + 1);
     }
     
     EnviarMensaje(receptor: string): string {
-        return "mensaje";
+        return "Hola " + this.nombre;
     }
 
     construirMensaje(): string {

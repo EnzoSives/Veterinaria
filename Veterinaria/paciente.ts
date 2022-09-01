@@ -1,9 +1,9 @@
 export class Paciente {
-    private nombre:string;
-    private especie:string;
-    private edad:number;
+    public nombre:string;
+    public especie:string;
+    public edad:number;
     
-    constructor (nombre:string, especie:string, edad:number, visita:number) {
+    constructor (nombre:string, especie:string, edad:number) {
         this.nombre = nombre;
         this.especie = especie;
         this.edad = edad;

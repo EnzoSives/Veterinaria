@@ -1,29 +1,33 @@
-
 import { IComunicarse } from "./IComunicarse";
 import { Persona } from "./persona";
 
 export class Cliente extends Persona implements IComunicarse {
    private cuil:number;
-   private visita: number;
+   private visitas: number;
+   protected id:number;
     
-    constructor (id: number,direccion: string, telefono: number,nombre: string) {
-        super(nombre, direccion, telefono,id);
-        this.cuil = this.cuil;
-        this.visita = this.visita;
+    constructor (direccion: string, telefono: number,nombre: string, cuil : number, visitas: number) {
+        super(nombre, direccion, telefono);
+        this.cuil = cuil;
+        this.visitas = visitas;
+        this.id = Math.floor((Math.random() * 100) + 1);
     }
+    
     construirMensaje(): string {
-        return "hola";
+        return "hola" + this.nombre;
     }
     
     EnviarMensaje(receptor: string): string {
         return "Mensaje";
     }
-
-    getEsVip() {
-        if (this.visita >=4){
-            console.log ("Es vip");
-        } else {
-            console.log ("No es vip");
-        }
+    getId(): number{
+        return this.id;
     }
+    getVisitas(): number{
+        return this.visitas;
+    }
+    setId(id:number){
+        this.id = id;
+    }
+    
 }
