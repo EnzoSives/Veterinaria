@@ -1,15 +1,15 @@
 export abstract class Persona {
-    protected nombre: string;
-    protected direccion: string;
-    protected telefono: number;
-    protected id : number;
+    public nombre: string;
+    public direccion: string;
+    public telefono: number;
+    
 
     
-    constructor(nombre: string, direccion: string, telefono: number,id: number) {
+    constructor(nombre: string, direccion: string, telefono: number) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
-        this.id = id;
+        
     }
     abstract construirMensaje(): string;
     saludar(nombre: string): void {
@@ -24,13 +24,6 @@ export abstract class Persona {
     getDireccion(): string {
         return this.direccion;
     }
-    getId(): number {
-        return this.id;
-    }
-    setId(id: number){
-        this.id = id;
-    }
-    
     setNombre(nombre: string) {
         this.nombre = nombre;
     }

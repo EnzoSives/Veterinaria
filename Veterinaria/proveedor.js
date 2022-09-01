@@ -15,32 +15,28 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-exports.Cliente = void 0;
+exports.Proveedor = void 0;
 var persona_1 = require("./persona");
-var Cliente = /** @class */ (function (_super) {
-    __extends(Cliente, _super);
-    function Cliente(direccion, telefono, nombre, cuil, visitas) {
+var Proveedor = /** @class */ (function (_super) {
+    __extends(Proveedor, _super);
+    function Proveedor(cuil, nombre, direccion, telefono) {
         var _this = _super.call(this, nombre, direccion, telefono) || this;
         _this.cuil = cuil;
-        _this.visitas = visitas;
         _this.id = Math.floor((Math.random() * 100) + 1);
         return _this;
     }
-    Cliente.prototype.construirMensaje = function () {
-        return "hola" + this.nombre;
+    Proveedor.prototype.EnviarMensaje = function (receptor) {
+        return "Hola " + this.nombre;
     };
-    Cliente.prototype.EnviarMensaje = function (receptor) {
+    Proveedor.prototype.construirMensaje = function () {
         return "Mensaje";
     };
-    Cliente.prototype.getId = function () {
-        return this.id;
+    Proveedor.prototype.getcuil = function () {
+        return this.cuil;
     };
-    Cliente.prototype.getVisitas = function () {
-        return this.visitas;
+    Proveedor.prototype.setCuil = function (newCuil) {
+        this.cuil = newCuil;
     };
-    Cliente.prototype.setId = function (id) {
-        this.id = id;
-    };
-    return Cliente;
+    return Proveedor;
 }(persona_1.Persona));
-exports.Cliente = Cliente;
+exports.Proveedor = Proveedor;
