@@ -1,7 +1,7 @@
 export abstract class Persona {
-    public nombre: string;
-    public direccion: string;
-    public telefono: number;
+    private nombre: string;
+    private direccion: string;
+    private telefono: number;
     
 
     
@@ -12,6 +12,7 @@ export abstract class Persona {
         
     }
     abstract construirMensaje(): string;
+    
     saludar(nombre: string): void {
         console.log('Hola', nombre);
     }

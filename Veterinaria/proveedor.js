@@ -22,17 +22,23 @@ var Proveedor = /** @class */ (function (_super) {
     function Proveedor(cuil, nombre, direccion, telefono) {
         var _this = _super.call(this, nombre, direccion, telefono) || this;
         _this.cuil = cuil;
-        _this.id = Math.floor((Math.random() * 100) + 1);
+        _this.id = _this.id;
         return _this;
     }
-    Proveedor.prototype.EnviarMensaje = function (receptor) {
-        return "Hola " + this.nombre;
+    Proveedor.prototype.EnviarMensaje = function () {
+        return "Hola " + this.getNombre;
     };
     Proveedor.prototype.construirMensaje = function () {
         return "Mensaje";
     };
+    Proveedor.prototype.getId = function () {
+        return this.id;
+    };
     Proveedor.prototype.getcuil = function () {
         return this.cuil;
+    };
+    Proveedor.prototype.setId = function (id) {
+        this.id = id;
     };
     Proveedor.prototype.setCuil = function (newCuil) {
         this.cuil = newCuil;

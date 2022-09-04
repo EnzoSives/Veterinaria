@@ -6,7 +6,11 @@ var Paciente = /** @class */ (function () {
         this.nombre = nombre;
         this.especie = especie;
         this.edad = edad;
+        this.id = this.id;
     }
+    Paciente.prototype.getId = function () {
+        return this.id;
+    };
     Paciente.prototype.getNombre = function () {
         return this.nombre;
     };
@@ -15,6 +19,9 @@ var Paciente = /** @class */ (function () {
     };
     Paciente.prototype.getEdad = function () {
         return this.edad;
+    };
+    Paciente.prototype.setId = function (id) {
+        this.id = id;
     };
     Paciente.prototype.setNombre = function (nuevoNombre) {
         this.nombre = nuevoNombre;
