@@ -1,13 +1,18 @@
 export class Paciente {
-    public nombre:string;
-    public especie:string;
-    public edad:number;
+    private id;
+    private nombre:string;
+    private especie:string;
+    private edad:number;
     
     constructor (nombre:string, especie:string, edad:number) {
         this.nombre = nombre;
         this.especie = especie;
         this.edad = edad;
+        this.id = this.id;
         
+    }
+    public getId() {
+        return this.id;
     }
     public getNombre() {
         return this.nombre;
@@ -17,6 +22,9 @@ export class Paciente {
     }
     public getEdad() {
         return this.edad;
+    }
+    setId (id: number) {
+        this.id = id;
     }
     
     setNombre(nuevoNombre: string) {

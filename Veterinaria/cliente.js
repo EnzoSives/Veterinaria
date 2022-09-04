@@ -23,14 +23,14 @@ var Cliente = /** @class */ (function (_super) {
         var _this = _super.call(this, nombre, direccion, telefono) || this;
         _this.cuil = cuil;
         _this.visitas = visitas;
-        _this.id = Math.floor((Math.random() * 100) + 1);
+        _this.id = _this.id;
         return _this;
     }
     Cliente.prototype.construirMensaje = function () {
-        return "hola" + this.nombre;
+        return "hola" + this.getNombre;
     };
-    Cliente.prototype.EnviarMensaje = function (receptor) {
-        return "Mensaje";
+    Cliente.prototype.EnviarMensaje = function () {
+        return "Hola" + this.getNombre;
     };
     Cliente.prototype.getId = function () {
         return this.id;

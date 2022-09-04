@@ -3,25 +3,30 @@ import { Persona } from "./persona";
 
 export class Proveedor extends Persona implements IComunicarse {
     
-    protected id : number;
+    private id : number;
     private cuil:number;
 
     constructor(cuil: number, nombre: string, direccion: string, telefono: number) {
         super(nombre,direccion,telefono);
         this.cuil = cuil;
-        this.id = Math.floor((Math.random() * 100) + 1);
+        this.id = this.id;
     }
     
-    EnviarMensaje(receptor: string): string {
-        return "Hola " + this.nombre;
+    EnviarMensaje(): string {
+        return "Hola " + this.getNombre;
     }
 
     construirMensaje(): string {
         return "Mensaje";
     }
-
+    getId(): number {
+        return this.id;
+    }
     getcuil(): number {
         return this.cuil;
+    }
+    setId(id: number): void {
+        this.id = id;  
     }
     setCuil(newCuil: number) {
         this.cuil = newCuil;

@@ -4,21 +4,21 @@ import { Persona } from "./persona";
 export class Cliente extends Persona implements IComunicarse {
    private cuil:number;
    private visitas: number;
-   protected id:number;
+   private id:number;
     
     constructor (direccion: string, telefono: number,nombre: string, cuil : number, visitas: number) {
         super(nombre, direccion, telefono);
         this.cuil = cuil;
         this.visitas = visitas;
-        this.id = Math.floor((Math.random() * 100) + 1);
+        this.id = this.id;
     }
     
     construirMensaje(): string {
-        return "hola" + this.nombre;
+        return "hola" + this.getNombre;
     }
     
-    EnviarMensaje(receptor: string): string {
-        return "Mensaje";
+    EnviarMensaje(): string {
+        return "Hola" + this.getNombre;
     }
     getId(): number{
         return this.id;
