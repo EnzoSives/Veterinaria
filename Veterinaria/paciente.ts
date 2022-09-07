@@ -36,4 +36,10 @@ export class Paciente {
     setEdad(nuevaEdad: number){
         this.edad = nuevaEdad;
     }
+    esExotico(paciente: Paciente): void{
+        if (paciente.especie != "Perro")
+            if(paciente.especie != "Gato"){
+                paciente.especie = "Exotico;"
+            }
+    }
 }
