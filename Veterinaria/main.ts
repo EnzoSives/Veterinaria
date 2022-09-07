@@ -20,7 +20,7 @@ let proveedor1 = new Proveedor(23002022,"Enzo","Portugal",131313);
 let proveedor2 = new Proveedor(230020,"Enzo","Portugal",131313);
 
 
-/*nuevaRed.altaVeterinaria(veterinaria1);
+nuevaRed.altaVeterinaria(veterinaria1);
 nuevaRed.altaProveedor(proveedor1);
 nuevaRed.altaProveedor(proveedor2);
 veterinaria1.altaCliente(cliente1);
@@ -29,8 +29,8 @@ veterinaria1.altaCliente(cliente4);
 veterinaria1.altaPaciente(paciente4);
 veterinaria1.bajaCliente(cliente2);
 veterinaria1.modificarCliente(cliente1);
-veterinaria1.modificarPaciente(paciente4);*/
+veterinaria1.modificarPaciente(paciente4);
 proveedor1.EnviarMensaje();
 cliente1.construirMensaje();
-//console.log(veterinaria1);
+console.log(veterinaria1);
 

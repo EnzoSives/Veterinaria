@@ -31,7 +31,7 @@ export class RedVeterinarias {
     }
     modificarProveedor(proveedor: Proveedor, nuevoProveedor: Proveedor) {
         for (let i = 0; i < this.proveedores.length; i++) {
-            if(proveedor[i]=== nuevoProveedor){
+            if(this.proveedores[i].getId === nuevoProveedor.getId){
                 proveedor[i].setNombre(ReadlineSync.question('Ingrese el nombre del nuevo proveedor: '));
                 proveedor[i].setCuil(ReadlineSync.question('Ingrese el cuil del proveedor: '));
         }
@@ -55,7 +55,7 @@ export class RedVeterinarias {
     }
     modificarVeterinaria(veterinaria: Veterinaria, nuevaVeterinaria: Veterinaria): void {
         for (let i = 0; i < this.proveedores.length; i++) {
-            if(veterinaria[i]=== nuevaVeterinaria){
+            if(this.veterinarias[i].getId=== nuevaVeterinaria.getId){
                 veterinaria[i].setNombre(ReadlineSync.question('Ingrese el nombre de la veterinaria: '));
                 veterinaria[i].setDireccion(ReadlineSync.question('Ingrese la direccion: '));
                 veterinaria[i].setTelefono(ReadlineSync.question('Ingrese el telefono: '));

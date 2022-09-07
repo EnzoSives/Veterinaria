@@ -44,19 +44,12 @@ export class Veterinaria{
         this.clientes.splice(this.clientes.indexOf(cliente));
     }
     
-    altaPaciente(paciente:Paciente){
-        let id:number = 0;
-        while(id == 0){
-            id = Math.floor(Math.random()* 100)
-
-            if(paciente.getId() == id){
-                id = 0 
-            } else {
-                this.pacientes.push(paciente)  
-                paciente.setId(id) 
+    altaPaciente(paciente:Paciente, duenio: Cliente){
+        let nuevoId;
+            this.pacientes.push(paciente)  
+                duenio.getId = nuevoId;
+                paciente.setId(nuevoId);
             }
-        }
-    }
     
     modificarPaciente(paciente:Paciente){
         for (let i = 0; i < this.pacientes.length; i++) {
